@@ -1,24 +1,26 @@
 // codigo_roto.c
+#include <stdio.h>
 
-void duplicar_numero(int numero) {
-    numero = numero * 2;
+void duplicar_numero(int *numero) {
+    *numero = *numero * 2;
 }
 
 int main() {
-    int valor1;
-    int valor2;
+    int valor1,*pvalor1;
+    int valor2,*pvalor2;
+    pvalor1 = &valor1;
+    pvalor2 = &valor2;
 
     printf("Ingrese el primer valor: ");
-    scanf("%d", valor1);
+    scanf("%d", &valor1);
 
     printf("Ingrese el segundo valor: ");
     scanf("%d", &valor2);
 
-    int suma = valor1 + valor2
-    printf("La suma es: %d\n", suma);
+    printf("La suma es: %d\n", *pvalor1+*pvalor2);
 
-    duplicar_numero(valor1);
-    printf("El primer valor duplicado es: %d\n", valor1);
+    duplicar_numero(&valor1);
+    printf("El primer valor duplicado es: %d\n", *pvalor1);
 
-    return 0
+    return 0;
 }

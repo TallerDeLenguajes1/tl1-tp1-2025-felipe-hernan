@@ -1,45 +1,45 @@
 #include <stdio.h>
 
-void f_alpha(int *p) {
-    int temp = *p;
-    int rev = 0;
-    while (temp > 0) {
-        rev = (rev * 10) + (temp % 10);
-        temp = temp / 10;
+void invertir(int *pNumero) {
+    int valor_inicial = *pNumero;
+    int numero_invertido = 0;
+    while (valor_inicial > 0) {
+        numero_invertido = (numero_invertido * 10) + (valor_inicial % 10);
+        valor_inicial = valor_inicial / 10;
     }
-    *p = rev;
+    *pNumero = numero_invertido;
 }
 
-void f_beta(int *p) {
-    *p = *p / 2;
+void mitad(int *pNumero) {
+    *pNumero = *pNumero / 2;
 }
 
-void f_gamma(int *p) {
-    int temp = *p;
+void suma_digito_numero(int *pNumero) {
+    int valor_inicial = *pNumero;
     int suma = 0;
-    while (temp > 0) {
-        suma = suma + (temp % 10);
-        temp = temp / 10;
+    while (valor_inicial > 0) {
+        suma = suma + (valor_inicial % 10);
+        valor_inicial = valor_inicial / 10;
     }
-    *p = *p + suma;
+    *pNumero = *pNumero + suma;
 }
 
-void procesar_enigma(int *valor_referencia) {
-    f_alpha(valor_referencia);
-    f_beta(valor_referencia);
-    f_gamma(valor_referencia);
+void transforma_numero(int *valor_referencia) {
+    invertir(valor_referencia);
+    mitad(valor_referencia);
+    suma_digito_numero(valor_referencia);
 }
 
 int main() {
-    int dato_secreto = 452;
+    int tranformar = 452;
     
-    printf("Iniciando depuracion con el valor: %d\n", dato_secreto);
+    printf("Iniciando depuracion con el valor: %d\n", tranformar);
     
     // Instrucción para el alumno: 
     // Pon un breakpoint aquí (F9) y usa F11 (Step Into) para entrar a cada función.
-    procesar_enigma(&dato_secreto);
+    transforma_numero(&tranformar);
     
-    printf("Resultado final del enigma: %d\n", dato_secreto);
+    printf("Resultado final del enigma: %d\n", tranformar);
     
     return 0;
 }
