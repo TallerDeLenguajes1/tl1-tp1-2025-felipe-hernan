@@ -12,4 +12,5 @@ int main(){
     printf("Tamanio de la variable %zu \n",sizeof(float));
     printf("hola mundo");
     return 0;
+    
 }
