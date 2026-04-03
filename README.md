@@ -9,10 +9,9 @@ Para crear un archivo .gitignore, se crea un archivo de texto y se asigna de nom
 Luego se edita este archivo, cada nueva linea debe incluir un archivo o capeta que quiera que Git
 lo ignore siguiendo una convencion para distinguir los elementos.
 
-### Ejercicio 3
+### Ejercicio 2 - 3
 
 **Codigo misterioso:** 
-
 El codigo misterioso cambia de valor un numero, primero invierte sus cifras, lo divide en 2
 y lo suma con la suma de sus cifras.
  
@@ -26,10 +25,11 @@ y lo suma con la suma de sus cifras.
 - **dato_secreto** cambia a **tranformar** porque el numero se va a transformar en otro numero
 
 **Codigo sin funcionar:** 
-
 1. se esperaba en dos lineas el ; ,**solucion**: agregar el ; en las dos lineas
 2. falto el pasaje por valor de la variable **valor1**, **solucion**: agregar el operador de direccion &
 3. falto incluir la libreria stdio.h , **solucion**: incluir la libreria stdio al principio
 4. la funcion no duplicaba el valor ingresado, **solucion**: hacer que la funcion tenga pasaje de parametro por referencia
 
-### Ejercicio 4
+### Ejercicio 2 - 4g
+- Los apartados 2 y 3 da el mismo resultado porque el puntero almacena la direccion de memoria de la variable a la que apunta. 
+- En el punto 4 se obtiene la direccion de memoria del puntero y no es igual a los anteriores porque el puntero es otra variable que tiene otra direccion de memoria.
